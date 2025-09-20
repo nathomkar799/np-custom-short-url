@@ -17,8 +17,7 @@ A simple and responsive **URL Shortener** frontend built with HTML, CSS, and Jav
 
 ## Demo
 
-![Demo Screenshot](screenshot.png)
-*(Replace with your own screenshot or GIF)*
+![Demo Screenshot](readme-assets/home.jpg)
 
 ---
 
