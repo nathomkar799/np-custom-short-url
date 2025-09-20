@@ -5,6 +5,9 @@ A simple and responsive **URL Shortener** frontend built with HTML, CSS, and Jav
 > ⚠️ **Note:** This repository currently contains only the **frontend**. Backend functionality (storing and redirecting URLs) is not implemented yet. Contributions are welcome!
 
 ---
+## Live Demo
+
+Check out the live frontend here: [URL Shortener](https://nathomkar799.github.io/np-custom-short-url/)
 
 ## Features
 
