@@ -15,88 +15,175 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    
     height: 100vh;
-    background-color:white;
+    background-color: white;
+    padding: 20px;
 }
 
 #slate {
-    padding: 5vh 5vh;
-    border: 1px solid #ccc;
-    border-radius: 55px;
-    width: fit-content;
+    padding: 4vh 4vh;
+    border-radius: 30px;
+    width: 80%;
+    max-width: 600px;
     background-color: #E4E8F5;
-    border: none;   
-     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    text-align: center;
 }
 
 #nav {
-  position: fixed; 
-  top: 0;
-  width: 100%;
-  background-color: #E4E8F5;
-  color: #2C2C2C;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 20px;
-  /* z-index: 1000; Ensures navbar is on top of other elements */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    background-color: #E4E8F5;
+    color: #2C2C2C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    font-weight: bold;
+    font-size: 22px;
+    z-index: 10;
 }
 
 #heading {
-    /* font-size: ; */
     color: #2C2C2C;
-    margin-bottom:px;
+    margin-bottom: 15px;
+    font-size: 2.2rem;
 }
 
-#long-url{
-    margin-top: 10px;
-    margin-bottom: 10px;
+#long-url {
+    margin: 15px 0;
     border-radius: 55px;
-    width: 100vh;
-    padding-top: 20px;
+    width: 100%;
+    max-width: 500px;
     padding: 12px;   
-    font-size: large;
-    border: 1px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    outline: none;
 }
 
-#oneliner{
+#long-url:focus {
+    border: 1px solid #5D4CE6;
+    box-shadow: 0 0 8px rgba(93, 76, 230, 0.4);
+}
+
+#oneliner {
     margin-top: 20px;
-    margin-bottom: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
-button{
+button {
     background: #5D4CE6;      
     color: white;            
-    padding: 5px;
-    padding-left: 50px;
-    padding-right: 50px;      
-    font-size: 20px;
+    padding: 10px 40px;     
+    font-size: 1rem;
     border: none;             
     border-radius: 55px;       
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: background 0.3s ease;
 }
 
-#check{
-    /* background-color: #fff; */
+button:hover {
+    background: #4835d4;
+}
+
+#check {
     display: flex;
-    align-items: centre;
-    justify-content: space-between;
-    font-size: 20px;
+    align-items: center;
+    font-size: 1rem;
     color: #2C2C2C;
-    padding-right: 5px;
+    padding-left: 10px;
 }
 
-#qr{
-    margin-right: 50px;
+#qr {
+    margin-right: 10px;
 }
 
 input[type=checkbox] {
-  transform: scale(1.5);  /* 1.5 = 150% size */
-  margin: 5px;            /* adjust spacing */
+    transform: scale(1.2);
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+/* Result section */
+#result {
+    margin-top: 25px;
+    font-size: 1rem;
+    color: #2C2C2C;
+    text-align: center;
+}
+
+#result a {
+    color: #5D4CE6;
+    text-decoration: none;
+    font-weight: bold;
+    word-wrap: break-word;
+}
+
+#result img {
+    margin-top: 10px;
+    width: 130px;
+    height: 130px;
+}
+
+/* ============= MEDIA QUERIES ============= */
+
+/* Tablets (≤768px) */
+@media (max-width: 768px) {
+    #slate {
+        width: 90%;
+        padding: 5vh 3vh;
+    }
+
+    #heading {
+        font-size: 1.8rem;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    #oneliner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #check {
+        padding-left: 0;
+        margin-top: 10px;
+    }
+}
+
+/* Mobiles (≤480px) */
+@media (max-width: 480px) {
+    #nav {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    #heading {
+        font-size: 1.5rem;
+    }
+
+    #long-url {
+        width: 100%;
+        font-size: 0.95rem;
+    }
+
+    button {
+        font-size: 0.95rem;
+        padding: 10px 25px;
+    }
+
+    #result img {
+        width: 100px;
+        height: 100px;
+    }
 }
