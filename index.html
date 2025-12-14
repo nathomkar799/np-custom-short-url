@@ -1,41 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>URL Shortener</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom URL Generator</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="main">
-        <div id="nav">
-            <p>This is NAVBAR</p>
-        </div>
-        <div id="slate">
-            <form action="">
-                <div id="heading">
-                    <label for=""><h2><b>Short URL Gnerator</b></h2></label>
-                </div>
-                <div id="url-input">
-                    <input id = "long-url" type="text" placeholder="https://example.com/long_url">
-                </div>
-                <div id="oneliner">
-                    <div id="generate">
-                        <button>Generate</button>
-                    </div>
-                    <div id="check">
-                        <div id="qr">
-                            <input type="checkbox" name="dfgd" id="">
-                            <label for=""><b>QR Code</b></label>
-                        </div>
-                        <div id="short">
-                            <input type="checkbox" name="" id="">
-                            <label for=""><b>Short URL</b></label>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
+
+  <div class="navbar">Navbar</div>
+
+  <div class="container">
+    <!-- Left Card -->
+    <div class="card">
+      <h2>Custom URL Generator</h2>
+
+      <label>Enter your original URL Here</label>
+      <input type="text" placeholder="https://example.com" />
+
+      <label>Enter your custom URL</label>
+      <input type="text" placeholder="my-custom-url" />
+
+      <label>Enter your password</label>
+      <div class="password-wrapper">
+        <input type="password" id="password" />
+        <span onclick="togglePassword()">👁</span>
+      </div>
+
+      <button class="btn">Submit</button>
     </div>
+
+    <!-- Right Card -->
+    <div class="card">
+      <h2>Custom URL Generator</h2>
+
+      <label>Customized URL</label>
+      <input type="text" value="https://short.ly/demo" readonly />
+
+      <label>QR Code</label>
+      <div class="qr-section">
+        <div class="qr">QR</div>
+        <div>
+          <div class="download-text">Press the below button to download the QR code</div>
+          <button class="btn">Download</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="reset-btn">Reset</button>
+
+  <div class="footer">Footer</div>
+
+  <script>
+    function togglePassword() {
+      const pwd = document.getElementById('password');
+      pwd.type = pwd.type === 'password' ? 'text' : 'password';
+    }
+  </script>
+
 </body>
 </html>
